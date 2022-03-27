@@ -1,0 +1,101 @@
+
+.dashboard {
+    margin-top: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
+    margin-bottom: 20px;
+}
+
+.dashboard .card-header {
+    background-color: #fff;
+}
+
+.control-block .btn-group button {
+    margin-right: 10px !important;
+}
+
+.dashboard button:hover, .dashboard button:focus {
+    text-decoration: none !important;
+}
+
+.btn .badge {
+    top: -8px !important;
+    z-index: 1;
+    right: -9px;
+}
+
+.dashboard button:focus {
+    box-shadow: none;
+}
+
+.btn-block {
+    align-items: center;
+}
+
+.status {
+    padding: 5px 7px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+
+.status_target {
+    margin: 0 auto 15px 0 !important;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    max-width: 100%;
+}
+
+.status_target .country {
+    font-weight: 600;
+}
+
+.status_target .country span {
+    font-weight: normal;
+}
+
+.status_target .target_response {
+    font-weight: 600;
+}
+
+.status.danger {
+    background: #dc3545;
+}
+
+.status.warning {
+    background: #f7a715;
+}
+
+.status.success {
+    background: #28a745;
+}
+
+
+.info-block {
+    font-size: 13px !important;
+}
+
+@media (max-width: 390px) {
+    .card-header {
+        padding: .75rem 0.25rem;
+    }
+
+    .logo a {
+        font-size: 14px !important;
+    }
+
+@media (max-width: 767px) {
+
+    .btn-block {
+        font-size: 13px;
+    }
+
+    .status {
+        margin-left: 5px;
+        padding: 5px 3px;
+        font-size: 12px;
+    }
+}
+
+
+}
