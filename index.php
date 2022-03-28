@@ -29,9 +29,9 @@
         <textarea rows="7" style="height: 150px" class="form-control" id="ip_enter" placeholder="Вставте текст з задачею"></textarea>
         </div>
         
-        <div class="alert alert-warning d-flex align-items-center mt-3" role="alert">
+        <!--<div class="alert alert-warning d-flex align-items-center mt-3" role="alert">
           <i class="fa-solid fa-triangle-exclamation"></i><span>Рекомендую використовувати одночасно для атаки не більше 15 адрес, бо може тупо не запуститись</span>
-        </div>
+        </div>-->
         <div class="position-relative mt-3 mb-5">
           <hr>
           <h5>Функції з форматування адрес:</h5>

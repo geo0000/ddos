@@ -30,6 +30,27 @@ header {
     justify-content: space-between;
 }
 
+.lang-menu {
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+.lang-menu li {
+    margin-left: 10px;
+}
+
+.lang-menu a {
+    text-decoration: none;
+    color: #8c97a3;
+    padding: 0 5px 0 5px;
+}
+
+.lang-menu li.active a {
+    color: #007bff;
+    background-color: #ffc107;
+}
+
 .logo {
     /* margin: 0 auto; */
     margin-left: 15px;
@@ -238,7 +259,7 @@ header {
     padding: 0;
     margin: 0;
     margin-right: 15px;
-    margin-left: auto;
+    /*margin-left: auto;*/
     display: flex;
     align-items: center;
 }
@@ -249,7 +270,7 @@ header {
     padding:  0 10px;
 }
 
-.right-btn:last-child {
+.headerright-btn:last-child {
     border-right: 1px solid #777;
 }
 

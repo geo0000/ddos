@@ -16,6 +16,12 @@
   <li class="nav-item" role="presentation">
     <a class="nav-link" id="digitalOcean-tab" data-toggle="tab" href="#digitalOcean" role="tab" aria-controls="digitalOcean" aria-selected="false">VPS на Digital Ocean</a>
   </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="azure-tab" data-toggle="tab" href="#azure" role="tab" aria-controls="azure" aria-selected="false">VPS на Azure</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="aws-tab" data-toggle="tab" href="#aws" role="tab" aria-controls="aws" aria-selected="false">VPS на AWS</a>
+  </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
@@ -167,7 +173,19 @@
     <!-- Digital Ocean -->
 
     <div class="tab-pane fade show" id="digitalOcean" role="tabpanel" aria-labelledby="digitalOcean-tab">
-        Незабаром зв'явиться...
+        <a target="_blank" href="https://telegra.ph/Digital-Ocean-02-27">Інструкції налаштування DigitalOcean</a>
+    </div>
+
+    <!-- Azure -->
+
+    <div class="tab-pane fade show" id="azure" role="tabpanel" aria-labelledby="azure-tab">
+        <a target="_blank" href="https://dou.ua/forums/topic/36795/?from=tg">Інструкції налаштування Azure</a>
+    </div>
+
+    <!-- AWS -->
+
+    <div class="tab-pane fade show" id="aws" role="tabpanel" aria-labelledby="aws-tab">
+        <a target="_blank" href="https://telegra.ph/DDOS-SEPAR-02-26">Інструкції налаштування AWS</a>
     </div>
 </div>
 

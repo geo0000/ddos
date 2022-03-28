@@ -1,9 +1,8 @@
 
-<?php 
+<?php
+$lang = (isset($_GET['lang']) && $_GET['lang'] == 'en' ? 'en' : 'ua');
 
-include_once($_SERVER['DOCUMENT_ROOT']."bd/connection.php");
-
-    $ip = $_SERVER['REMOTE_ADDR'];
+$link_prefix = ($lang == 'en' ? '?lang=en' : '');
 
     ip::setIpAddr($ip);
 
@@ -20,16 +19,28 @@ include_once($_SERVER['DOCUMENT_ROOT']."bd/connection.php");
   <div class="header">
 
     <div class="logo">
-      <a href="/">
+      <a href="/<?php echo $link_prefix;?>">
       <div class="main-logo text-center">
         Русский сайт <span>иди на х@й</span>
       </div>
       </a>
     </div>
 
+    <ul class="lang-menu">
+        <li class="<?php echo ($lang == 'ua' ? 'active' : ''); ?>">
+            <a href="?lang=ua">UA</a>
+        </li>
+        <li class="<?php echo ($lang == 'en' ? 'active' : ''); ?>">
+            <a href="?lang=en">EN</a>
+        </li>
+    </ul>
+
     <ul class="right-btn">
       <li>
-        <div class="d-flex flex-column align-items-center" data-toggle="tooltip" data-title="Це кількість унікальних користувачів, які ведуть активну роботу, а от же ми - сила! Слава Україні!"><span class="visitors-text">Кількість користувачів:</span> <b><?php echo ip::getVisitors(); ?></b></div>
+        <div class="d-flex flex-column align-items-center" data-toggle="tooltip" data-title="Це кількість унікальних користувачів, які ведуть активну роботу, а от же ми - сила! Слава Україні!">
+            <span class="visitors-text">
+                <?php echo ($lang == 'en' ? 'Number of users': 'Кількість користувачів'); ?>:
+            </span> <b><?php echo ip::getVisitors(); ?></b></div>
       </li>
 
       <!-- <li data-toggle="tooltip" data-placement="bottom" data-title="Потрібна допомога? Звертайся">
@@ -39,45 +50,19 @@ include_once($_SERVER['DOCUMENT_ROOT']."bd/connection.php");
       </li> -->
     </ul>
 
-
-
   </div>
 </header>
 
 <div class="body-pane">
   <div class="navbar-left">
-
-    <ul class="menu">
-
-      <li class="active">
-        <a href="/">
-          <i class="fas fa-puzzle-piece"></i>
-          <span>Сервіс для команд</span>
-        </a>
-      </li>
-
-      <li class="">
-        <a href="/instruction/">
-          <i class="fas fa-tools"></i>
-          <span>Інструкції старту DDOS</span>
-        </a>
-      </li>
-
-      <li class="">
-        <a href="/vps/">
-          <i class="fas fa-server"></i>
-          <span>Інструкції з розгортання VPS</span>
-        </a>
-      </li>
-
-      <li class="">
-        <a href="/check/">
-          <i class="fas fa-bullseye"></i>
-          <span>Статуси цілей</span>
-        </a>
-      </li>
-
-    </ul>
+    <?php
+    if ($lang == 'en') {
+      include("menu_en.php");
+    }
+    else {
+      include("menu_ua.php");
+    }
+    ?>
     
     <ul class="menu position-absolute w-100 fixed-bottom">
     <li>
